@@ -1,10 +1,14 @@
 <template>
   <nav id="nav" :class="{ active: isActive }">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link :to="{ name: 'Login' }">Login</router-link>
-    <router-link :to="{ name: 'Register' }">Register</router-link>
-    <router-link :to="{ name: 'Products' }">Products</router-link>
+    <router-link @click="toggleNav" to="/">Home</router-link>
+    <router-link @click="toggleNav" to="/about">About</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Login' }">Login</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Register' }"
+      >Register</router-link
+    >
+    <router-link @click="toggleNav" :to="{ name: 'Products' }"
+      >Products</router-link
+    >
   </nav>
   <button id="nav-btn" @click="toggleNav">Toggle Nav</button>
 </template>
